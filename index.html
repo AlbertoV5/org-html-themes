@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-07-11 Mon 21:02 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Example</title>
+<meta name="author" content="Alberto Valdez" />
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" type="text/css" href="https://albertov5.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://albertov5.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://albertov5.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://albertov5.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Example</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgbf68bf4">Named Tuple</a></li>
+<li><a href="#org58b5738">Open this header</a>
+<ul>
+<li><a href="#orgde5e623">This is a sub header, open it.</a>
+<ul>
+<li><a href="#org1f8e766">This is a sub sub header!</a></li>
+<li><a href="#orgadf762a">Other one.</a></li>
+</ul>
+</li>
+<li><a href="#org4b59e6f">Another sub header with a code block.</a></li>
+</ul>
+</li>
+<li><a href="#org34189ba"><span class="todo TODO">TODO</span> Now for something completely different</a>
+<ul>
+<li><a href="#org7cf8073"><span class="done DONE">DONE</span> Buy a new parrot</a></li>
+<li><a href="#org42afac4"><span class="todo TODO">TODO</span> Buy some cheese</a></li>
+</ul>
+</li>
+<li><a href="#orgd8848ed">The end.</a></li>
+</ul>
+</div>
+</div>
+<p>
+This is a demo.
+</p>
+
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+</p>
+
+
+<div id="outline-container-orgbf68bf4" class="outline-2">
+<h2 id="orgbf68bf4">Named Tuple</h2>
+<div class="outline-text-2" id="text-orgbf68bf4">
+<p>
+
+<p>
+Typed version of <a href="https://docs.python.org/3/library/collections.html#collections.namedtuple">collections.namedtuple().</a>
+</p>
+
+<p>
+Usage:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #3399DD;">class</span> <span style="color: #33CCAA;">Employee</span>(NamedTuple):
+    name: <span style="color: #CC88CC;">str</span>
+    <span style="color: #CC88CC;">id</span>: <span style="color: #CC88CC;">int</span>
+</pre>
+</div>
+
+<p>
+This is equivalent to:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #5FD7FF;">Employee</span> = collections.namedtuple(<span style="color: #DD8877;">'Employee'</span>, [<span style="color: #DD8877;">'name'</span>, <span style="color: #DD8877;">'id'</span>])
+</pre>
+</div>
+
+<p>
+To give a field a default value, you can assign to it in the class body:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #3399DD;">class</span> <span style="color: #33CCAA;">Employee</span>(NamedTuple):
+    <span style="color: #5FD7FF;">name</span>: <span style="color: #CC88CC;">str</span>
+    <span style="color: #CC88CC;">id</span>: <span style="color: #CC88CC;">int</span> = <span style="color: #BBCCAA; font-weight: bold;">3</span>
+
+<span style="color: #5FD7FF;">employee</span> = Employee(<span style="color: #DD8877;">'Guido'</span>)
+<span style="color: #3399DD;">assert</span> employee.<span style="color: #CC88CC;">id</span> == <span style="color: #BBCCAA; font-weight: bold;">3</span>
+</pre>
+</div>
+
+<p>
+Fields with a default value must come after any fields without a default.
+</p>
+
+<p>
+The resulting class has an extra attribute <span class="underline"><span class="underline">annotations</span></span> giving a dict that maps the field names to the field types. (The field names are in the _fields attribute and the default values are in the _field<sub>defaults</sub> attribute, both of which are part of the namedtuple()<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup> API.)
+</p>
+
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org58b5738" class="outline-2">
+<h2 id="org58b5738">Open this header</h2>
+<div class="outline-text-2" id="text-org58b5738">
+</div>
+<div id="outline-container-orgde5e623" class="outline-3">
+<h3 id="orgde5e623">This is a sub header, open it.</h3>
+<div class="outline-text-3" id="text-orgde5e623">
+</div>
+<div id="outline-container-org1f8e766" class="outline-4">
+<h4 id="org1f8e766">This is a sub sub header!</h4>
+</div>
+<div id="outline-container-orgadf762a" class="outline-4">
+<h4 id="orgadf762a">Other one.</h4>
+</div>
+</div>
+<div id="outline-container-org4b59e6f" class="outline-3">
+<h3 id="org4b59e6f">Another sub header with a code block.</h3>
+<div class="outline-text-3" id="text-org4b59e6f">
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #3399DD;">import</span> numpy <span style="color: #3399DD;">as</span> np
+
+<span style="color: #5FD7FF;">x</span> = np.arange(<span style="color: #BBCCAA; font-weight: bold;">0</span>, <span style="color: #BBCCAA; font-weight: bold;">1</span>, <span style="color: #BBCCAA; font-weight: bold;">10</span>)
+<span style="color: #5FD7FF;">y</span> = np.arange(-<span style="color: #BBCCAA; font-weight: bold;">1</span>, <span style="color: #BBCCAA; font-weight: bold;">0</span>, <span style="color: #BBCCAA; font-weight: bold;">10</span>)
+<span style="color: #5FD7FF;">r</span> = np.stack((y, x), axis = <span style="color: #BBCCAA; font-weight: bold;">1</span>)
+<span style="color: #3399DD;">return</span> r
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org34189ba" class="outline-2">
+<h2 id="org34189ba"><span class="todo TODO">TODO</span> Now for something completely different</h2>
+<div class="outline-text-2" id="text-org34189ba">
+</div>
+<div id="outline-container-org7cf8073" class="outline-3">
+<h3 id="org7cf8073"><span class="done DONE">DONE</span> Buy a new parrot</h3>
+<div class="outline-text-3" id="text-org7cf8073">
+<p>
+Pining for the fjords.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org42afac4" class="outline-3">
+<h3 id="org42afac4"><span class="todo TODO">TODO</span> Buy some cheese</h3>
+<div class="outline-text-3" id="text-org42afac4">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Cheese</th>
+<th scope="col" class="org-right">stock</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Red Leicester</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-left">Tilsit</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-left">Caerphilly</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-left">Bel Paese</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-left">Red windstor</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-left">Stilton</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-left">Emmental</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-left">Gruyere</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-left">Norwegian jarlsberg</td>
+<td class="org-right">0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgd8848ed" class="outline-2">
+<h2 id="orgd8848ed">The end.</h2>
+<div class="outline-text-2" id="text-orgd8848ed">
+<p>
+In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called greeking, which allows designers to consider the form of a webpage or publication, without the meaning of the text influencing the design.
+</p>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+<a href="https://docs.python.org/3/library/collections.html#collections.namedtuple">https://docs.python.org/3/library/collections.html#collections.namedtuple</a>
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="author">Author: Alberto Valdez</p>
+<p class="date">Created: 2022-07-11 Mon 21:02</p>
+</div>
+</body>
+</html>

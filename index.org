@@ -1,0 +1,95 @@
+#+title:     Example
+#+author:    Alberto Valdez
+#+email:     avq5ac1@gmail.com
+#+SETUPFILE: https://albertov5.github.io/org-html-themes/org/theme-readtheorg.setup
+#+PROPERTY: header-args :mkdirp yes :dir .
+#+OPTIONS: num:nil
+
+This is a demo.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+
+
+* Named Tuple
+#+begin_export html
+<p>
+#+end_export
+
+Typed version of [[https://docs.python.org/3/library/collections.html#collections.namedtuple][collections.namedtuple().]]
+
+Usage:
+
+#+BEGIN_SRC python :results silent :exports code
+class Employee(NamedTuple):
+    name: str
+    id: int
+#+END_SRC
+
+This is equivalent to:
+
+#+BEGIN_SRC python :results silent :exports code
+Employee = collections.namedtuple('Employee', ['name', 'id'])
+#+END_SRC
+
+To give a field a default value, you can assign to it in the class body:
+
+#+BEGIN_SRC python :results silent :exports code
+class Employee(NamedTuple):
+    name: str
+    id: int = 3
+
+employee = Employee('Guido')
+assert employee.id == 3
+#+END_SRC
+
+Fields with a default value must come after any fields without a default.
+
+The resulting class has an extra attribute __annotations__ giving a dict that maps the field names to the field types. (The field names are in the _fields attribute and the default values are in the _field_defaults attribute, both of which are part of the namedtuple()[fn:n-tup] API.)
+
+#+begin_export html
+</p>
+#+end_export
+
+
+* Open this header
+** This is a sub header, open it.
+*** This is a sub sub header!
+*** Other one.
+** Another sub header with a code block.
+#+begin_src python :results silent :exports code
+import numpy as np
+
+x = np.arange(0, 1, 10)
+y = np.arange(-1, 0, 10)
+r = np.stack((y, x), axis = 1)
+return r
+#+end_src
+
+* TODO Now for something completely different
+
+** DONE Buy a new parrot
+Pining for the fjords.
+
+** TODO Buy some cheese
+
+| Cheese              | stock |
+|---------------------+-------+
+| Red Leicester       |     0 |
+| Tilsit              |     0 |
+| Caerphilly          |     0 |
+| Bel Paese           |     0 |
+| Red windstor        |     0 |
+| Stilton             |     0 |
+| Emmental            |     0 |
+| Gruyere             |     0 |
+| Norwegian jarlsberg |     0 |
+
+
+*   The end.
+
+In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called greeking, which allows designers to consider the form of a webpage or publication, without the meaning of the text influencing the design.
+
+
+* Footnotes
+
+[fn:n-tup] https://docs.python.org/3/library/collections.html#collections.namedtuple
