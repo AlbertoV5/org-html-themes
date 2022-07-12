@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700");
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap');
 
 h1,h2,h3,h4,h5,h6,legend{
     font-family:"Roboto Slab","ff-tisa-web-pro","Georgia",Arial,sans-serif;
-    font-weight:700;
+    font-weight:600;
     margin-top:0;
 }
 
@@ -51,8 +52,8 @@ html{
 }
 
 body{
-    background:#edf0f2;
-    color:#404040;
+    background:#131416;
+    color:#d0d0d0;
     font-family:"Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
     font-weight:normal;
     margin:0;
@@ -61,7 +62,7 @@ body{
 }
 
 #content{
-    background:#fcfcfc;
+    background:#131416;
     height:100%;
     margin-left:300px;
     /* margin:auto; */
@@ -80,8 +81,8 @@ b,strong{
     font-weight:bold}
 
 blockquote{
-    background-color: #F0F0F0;
-    border-left:5px solid #CCCCCC;
+    background-color: #202020;
+    border-left:5px solid #202020;
     font-style:italic;
     line-height:24px;
     margin:0px 0px 24px 0px;
@@ -161,7 +162,7 @@ dl dd{
 
 @media print{
     .codeblock,pre.src{
-        white-space:pre.src-wrap}
+        white-space:pre-wrap}
 }
 
 @media print{
@@ -282,11 +283,11 @@ dl dd{
 }
 
 code{
-    background:#fff;
-    border:solid 1px #e1e4e5;
+    background:#202020;
+    border:solid 1px #202020;
     /* color:#000;  for clickable code */
-    font-family:Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
-    font-size:75%;
+    font-family:'Fira Code',Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
+    font-size:100%;
     max-width:100%;
     overflow-x:auto;
     padding:0 5px;
@@ -294,12 +295,12 @@ code{
 }
 
 .codeblock-example{
-    border:1px solid #e1e4e5;
+    border:1px solid #202020;
     border-bottom:none;
     padding:24px;
     padding-top:48px;
     font-weight:500;
-    background:#fff;
+    background:#202020;
     position:relative}
 
 .codeblock-example:after{
@@ -308,25 +309,25 @@ code{
     top:0px;
     left:0px;
     background:#9B59B6;
-    color:#fff;
+    color:#202020;
     padding:6px 12px}
 
 .codeblock-example.prettyprint-example-only{
-    border:1px solid #e1e4e5;
+    border:1px solid #202020;
     margin-bottom:24px}
 
 .codeblock,pre.src,#content .literal-block{
-    border:1px solid #e1e4e5;
+    border:1px solid #202020;
     padding:12px;
     overflow-x:auto;
-    background:#fff;
+    background:#202020;
     margin:1px 0 24px 0}
 
 pre.src{
     /* color:#404040; */
     display:block;
-    font-family:Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
-    font-size:12px;
+    font-family:'Fira Code',Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
+    font-size:15px;
     line-height:1.5;
     margin:1px 0px 24px 0px;
     overflow:auto;
@@ -335,10 +336,10 @@ pre.src{
 }
 
 .example{
-    background:#f3f6f6;
-    border:1px solid #e1e4e5;
-    color:#404040;
-    font-size: 12px;
+    background:#202020;
+    border:1px solid #202020;
+    color:#d0d0d0;
+    font-size: 15px;
     line-height: 1.5;
     margin-bottom:24px;
     padding:12px;
@@ -360,14 +361,14 @@ table td,table th{
     margin:0;
     overflow:visible;
     padding:8px 16px;
-    background-color:white;
-    border:1px solid #e1e4e5;
+    background-color:#18181a;
+    border:1px solid #666666;
 }
 
 table thead th{
     font-weight:bold;
-    border-top:3px solid #e1e4e5;
-    border-bottom:1px solid #e1e4e5;
+    border-top:3px solid #666666;
+    border-bottom:1px solid #666666;
 }
 
 table caption{
@@ -377,11 +378,11 @@ table caption{
 }
 
 table tr:nth-child(2n-1) td{
-    background-color:#f3f6f6;
+    background-color:#18181a;
 }
 
 table tr:nth-child(2n) td{
-    background-color:white;
+    background-color:#18181a;
 }
 
 .figure p{
@@ -411,7 +412,7 @@ table tr:nth-child(2n) td{
     display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 700px) {
     #table-of-contents {
         display: none;
         width: 60%;
@@ -437,7 +438,7 @@ table tr:nth-child(2n) td{
     }
 
     #toggle-sidebar h2 {
-        background-color:#2980B9;
+        background-color:#1a1c1e;
         width:100%;
         height:50px;
         left:0;
@@ -705,21 +706,21 @@ hr{
     margin-bottom:0}
 
 #table-of-contents li.divide-top{
-    border-top:solid 1px #404040}
+    border-top:solid 1px #1a1c1e}
 
 #table-of-contents li.divide-bottom{
-    border-bottom:solid 1px #404040}
+    border-bottom:solid 1px #1a1c1e}
 
 #table-of-contents li.current{
     background:#e3e3e3}
 
 #table-of-contents li.current a{
     color:gray;
-    border-right:solid 1px #c9c9c9;
+    border-right:solid 1px #1a1c1e;
     padding:0.4045em 2.427em}
 
 #table-of-contents li.current a:hover{
-    background:#d6d6d6}
+    background:#1a1c1e}
 
 #table-of-contents li a{
     /* color:#404040; */
@@ -732,7 +733,7 @@ hr{
     padding-left:1.618em -4px}
 
 #table-of-contents li.on a:hover,#table-of-contents li.current>a:hover{
-    background:#fcfcfc}
+    background:#1a1c1e}
 
 #table-of-contents li ul li a{
     /* background:#c9c9c9; */
@@ -769,7 +770,7 @@ hr{
 
 #table-of-contents a:hover{
     color: #ffffff !important;
-    background-color:#4e4a4a;
+    background-color:#4f96d5; /*#538bf7*/
     cursor:pointer}
 
 /* #text-table-of-contents { */
@@ -784,7 +785,7 @@ hr{
     overflow-x:hidden;
     overflow-y:scroll;
     height:100%;
-    background:#343131;
+    background:#1a1c1e;
     z-index:200;
     scrollbar-base-color: #1F1D1D;
     scrollbar-arrow-color: #b3b3b3;
@@ -794,7 +795,7 @@ hr{
 
 #table-of-contents h2{
     z-index:200;
-    background-color:#2980B9;
+    background-color:#1a1c1e;
     text-align:center;
     padding:0.809em;
     display:block;
@@ -830,7 +831,7 @@ ul.nav>li.active li.active>a {
 }
 
 ul.nav>li.active>a {
-    background-color: #fcfcfc;
+    background-color: #c9c9c9;
     color: black !important;
     border-bottom:solid 1px #c9c9c9 !important; /* XXX Restrict it to 2nd level */
     border-right:solid 1px #c9c9c9 !important;
@@ -924,7 +925,7 @@ footer p{
     width:300px;
     color:#fcfcfc;
     background:#1f1d1d;
-    border-top:solid 10px #343131;
+    border-top:solid 10px #4286e6;
     font-family:"Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
     font-size: 90%;
     z-index:400;
@@ -939,7 +940,7 @@ footer p{
 #postamble .date {
     font-size: 90%;
     margin-bottom: 0px;
-    color: #27AE60;
+    color: #4286e6;
 }
 
 #postamble .creator,#postamble .validation {
@@ -1080,7 +1081,7 @@ h2.footnotes{
 }
 
 .todo{
-    background-color: #f29f97;
+    background-color: #54b5a6;
     padding: 0px 4px;
     color: #fff;
 }
