@@ -52,7 +52,7 @@ html{
 }
 
 body{
-    background:#131416;
+    background:#1e1e1e;
     color:#d0d0d0;
     font-family:"Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
     font-weight:normal;
@@ -62,7 +62,7 @@ body{
 }
 
 #content{
-    background:#131416;
+    background:#1e1e1e;
     height:100%;
     margin-left:300px;
     /* margin:auto; */
@@ -283,9 +283,10 @@ dl dd{
 }
 
 code{
-    background:#202020;
-    border:solid 1px #202020;
-    /* color:#000;  for clickable code */
+    background:#1C1C1C;
+    border:solid 1px #1C1C1C;
+    border-radius: 12px;
+    color:#c8c8c8;  /*for clickable code */
     font-family:'Fira Code',Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
     font-size:100%;
     max-width:100%;
@@ -295,12 +296,12 @@ code{
 }
 
 .codeblock-example{
-    border:1px solid #202020;
+    border:1px solid #1C1C1C;
     border-bottom:none;
     padding:24px;
     padding-top:48px;
     font-weight:500;
-    background:#202020;
+    background:#1C1C1C;
     position:relative}
 
 .codeblock-example:after{
@@ -309,18 +310,19 @@ code{
     top:0px;
     left:0px;
     background:#9B59B6;
-    color:#202020;
+    color:#d0d0d0;
     padding:6px 12px}
 
 .codeblock-example.prettyprint-example-only{
-    border:1px solid #202020;
+    border:1px solid #1C1C1C;
     margin-bottom:24px}
 
 .codeblock,pre.src,#content .literal-block{
-    border:1px solid #202020;
-    padding:12px;
+    border:1px solid #1a1a1a;
+    border-radius: 20px;
+    padding:20px;
     overflow-x:auto;
-    background:#202020;
+    background:#1a1a1a;
     margin:1px 0 24px 0}
 
 pre.src{
@@ -331,13 +333,13 @@ pre.src{
     line-height:1.5;
     margin:1px 0px 24px 0px;
     overflow:auto;
-    padding:12px;
+    padding:15px;
     white-space:pre;
 }
 
 .example{
-    background:#202020;
-    border:1px solid #202020;
+    background:#1C1C1C;
+    border:1px solid #1C1C1C;
     color:#d0d0d0;
     font-size: 15px;
     line-height: 1.5;
@@ -361,7 +363,7 @@ table td,table th{
     margin:0;
     overflow:visible;
     padding:8px 16px;
-    background-color:#18181a;
+    background-color:#1C1C1C;
     border:1px solid #666666;
 }
 
@@ -378,11 +380,11 @@ table caption{
 }
 
 table tr:nth-child(2n-1) td{
-    background-color:#18181a;
+    background-color:#1C1C1C;
 }
 
 table tr:nth-child(2n) td{
-    background-color:#18181a;
+    background-color:#1C1C1C;
 }
 
 .figure p{
@@ -706,21 +708,21 @@ hr{
     margin-bottom:0}
 
 #table-of-contents li.divide-top{
-    border-top:solid 1px #1a1c1e}
+    border-top:solid 1px #1C1C1C}
 
 #table-of-contents li.divide-bottom{
-    border-bottom:solid 1px #1a1c1e}
+    border-bottom:solid 1px #1C1C1C}
 
 #table-of-contents li.current{
     background:#e3e3e3}
 
 #table-of-contents li.current a{
     color:gray;
-    border-right:solid 1px #1a1c1e;
+    border-right:solid 1px #1C1C1C;
     padding:0.4045em 2.427em}
 
 #table-of-contents li.current a:hover{
-    background:#1a1c1e}
+    background:#1C1C1C}
 
 #table-of-contents li a{
     /* color:#404040; */
@@ -733,7 +735,7 @@ hr{
     padding-left:1.618em -4px}
 
 #table-of-contents li.on a:hover,#table-of-contents li.current>a:hover{
-    background:#1a1c1e}
+    background:#1C1C1C}
 
 #table-of-contents li ul li a{
     /* background:#c9c9c9; */
@@ -785,7 +787,7 @@ hr{
     overflow-x:hidden;
     overflow-y:scroll;
     height:100%;
-    background:#1a1c1e;
+    background:#282828;
     z-index:200;
     scrollbar-base-color: #1F1D1D;
     scrollbar-arrow-color: #b3b3b3;
@@ -812,7 +814,7 @@ li.active {
 }
 
 li.active>a {
-    color: black !important;
+    color: #1C1C1C !important;
 }
 
 ul.nav>li.active a {
@@ -824,7 +826,7 @@ ul.nav>li.active li.active {
 }
 
 ul.nav>li.active li.active>a {
-    color: black !important;
+    color: #1C1C1C !important;
     border-right:solid 1px #c9c9c9 !important;
     font-weight: bold !important;
     display: block !important;
@@ -832,7 +834,7 @@ ul.nav>li.active li.active>a {
 
 ul.nav>li.active>a {
     background-color: #c9c9c9;
-    color: black !important;
+    color: #1C1C1C !important;
     border-bottom:solid 1px #c9c9c9 !important; /* XXX Restrict it to 2nd level */
     border-right:solid 1px #c9c9c9 !important;
     font-weight: bold !important;
@@ -913,7 +915,7 @@ li.active>ul {
 /* } */
 
 footer{
-    color:#999}
+    color:#1c1c1c}
 
 footer p{
     margin-bottom:12px}
@@ -924,7 +926,7 @@ footer p{
     left:0;
     width:300px;
     color:#fcfcfc;
-    background:#1a1c1e;
+    background:#282828;
     border-top:solid 10px #4286e6;
     font-family:"Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
     font-size: 90%;
