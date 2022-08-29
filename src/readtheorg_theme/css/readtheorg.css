@@ -364,7 +364,7 @@ table td,table th{
     overflow:visible;
     padding:8px 16px;
     background-color:#1C1C1C;
-    border:1px solid #666666;
+    border:1px solid #282828;
 }
 
 table thead th{
@@ -714,7 +714,7 @@ hr{
     border-bottom:solid 1px #1C1C1C}
 
 #table-of-contents li.current{
-    background:#e3e3e3}
+    background:#d0d0d0}
 
 #table-of-contents li.current a{
     color:gray;
