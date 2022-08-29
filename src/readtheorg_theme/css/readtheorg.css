@@ -318,7 +318,7 @@ code{
 .codeblock,pre.src,#content .literal-block{
     border:1px solid #1a1a1a;
     border-radius: 20px;
-    padding:20px;
+    padding:12px;
     overflow-x:auto;
     background:#1a1a1a;
     margin:1px 0 24px 0}
@@ -362,8 +362,8 @@ table td,table th{
     margin:0;
     overflow:visible;
     padding:8px 16px;
-    background-color:#1C1C1C;
-    border:1px solid #282828;
+    background-color:#1a1a1a;
+    border:1px solid #3a3a3a;
 }
 
 table thead th{
@@ -612,7 +612,7 @@ a .fa,a #content .admonition-title,#content a .admonition-title{
 #content .admonition-title.important:before,
 #content .admonition-title.error:before, #content .admonition-title.danger:before{
     font-family:FontAwesome;
-    content: "";}
+}
 
 .seealso + div, .note + div, #content .note,#content .seealso{
     background:#e7f2fa;
@@ -620,14 +620,21 @@ a .fa,a #content .admonition-title,#content a .admonition-title{
 
 #content .admonition-title.tip,#content .admonition-title.important,#content .admonition-title.hint{
     line-height: 1;
-    background:#1abc9c}
+    background:#2259a1}
 
 .important + div, .tip + div, .hint + div, #content .important, #content .tip, #content .hint{
     background:#dbfaf4}
 
 #content .admonition-title.note,#content .admonition-title.seealso{
     line-height: 1;
-    background:#6ab0de}
+    background:#2259a1;
+    color:#d0d0d0;
+    font-family:"Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
+    font-weight:normal;
+    margin:0;
+    min-height:100%;
+    overflow-x:hidden;
+}
 
 #content .admonition-title.warning,#content .admonition-title.caution,#content .admonition-title.attention{
     line-height: 1;
@@ -700,7 +707,7 @@ hr{
     font-weight:bold;
     text-transform:uppercase;
     font-size:80%;
-    color:#2259a1;
+    color:#4286e6;
     white-space:nowrap}
 
 #table-of-contents ul{
@@ -1082,7 +1089,7 @@ h2.footnotes{
 }
 
 .todo{
-    background-color: #54b5a6;
+    background-color: #2259a1;
     padding: 0px 4px;
     color: #fff;
 }
@@ -1121,7 +1128,7 @@ h2.footnotes{
 .timestamp {
     font-family: Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
     font-size: 90%;
-    color: navy;
+    color: #2259a1;
 }
 
 .nav .timestamp {

@@ -22,7 +22,14 @@ $(function() {
     function replace_admonition (tag, readable) {
         $(`.${tag}:not(#table-of-contents *)`)
             .parent().parent().replaceWith(function() {
-                return `<p id='${this.id}' class='admonition-title ${tag}'>${readable}</p>`
+                let div = this.getElementsByClassName("note")[0];
+                let p = div.getElementsByTagName("p")[0];
+                let text = p.textContent;
+                // ${readable}
+                return `
+                <p id='${this.id}' class='admonition-title ${tag}'>
+                ${text}
+                </p>`
             });
     }
     replace_admonition('note', 'Note');
