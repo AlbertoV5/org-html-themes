@@ -905,8 +905,9 @@ hr{
 }
 
 #table-of-contents a:hover{
-    color: #252525 !important;
-    background-color:#c6c6c6; /*#538bf7*/
+    color: #c6c6c6 !important;
+    background-color:#303030; /*#538bf7*/
+    font-weight: 600;
     cursor:pointer}
 
 /* #text-table-of-contents { */
@@ -953,7 +954,7 @@ li.active {
 }
 
 li.active>a {
-    color: #303030 !important;
+    color: #c6c6c6 !important;
 }
 
 ul.nav>li.active a {
@@ -961,19 +962,19 @@ ul.nav>li.active a {
 }
 
 ul.nav>li.active li.active {
-    background-color: #c6c6c6;
+    background-color: #303030;
 }
 
 ul.nav>li.active li.active>a {
-    color: #252525 !important;
+    color: #c6c6c6 !important;
     border-right:solid 0px #303030 !important;
     font-weight: bold !important;
     display: block !important;
 }
 
 ul.nav>li.active>a {
-    background-color: #c6c6c6;
-    color: #252525!important;
+    background-color: #303030;
+    color: #c6c6c6!important;
     border-bottom:solid 0px #c6c6c6 !important; /* XXX Restrict it to 2nd level */
     border-right:solid 0px #c6c6c6 !important;
     font-weight: bold !important;

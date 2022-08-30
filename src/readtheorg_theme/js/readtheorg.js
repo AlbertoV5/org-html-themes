@@ -71,13 +71,13 @@ $(function(){
         $(`.${tag}:not(#table-of-contents *)`)
         .replaceWith(function () {
             let name = this.getElementsByTagName("p")[0];
-            let e = document.createElement('div');
-            e.className = tag;
-            e.textContent = name.innerHTML.replace("<sub>", "_").replace("</sub>", "");
-            if (e.textContent.length <= 2){
-                e.textContent = ".     ";
-            }
-            this.nextElementSibling.prepend(e);
+            // let e = document.createElement('div');
+            // e.className = tag;
+            // e.textContent = name.innerHTML.replace("<sub>", "_").replace("</sub>", "");
+            // this.nextElementSibling.prepend(e);
+            let n = name.innerHTML.replace("<sub>", "_").replace("</sub>", "").replace("\n", "");
+            console.log(n);
+            this.nextElementSibling.setAttribute("name", n);
             return ``
         })
     }
