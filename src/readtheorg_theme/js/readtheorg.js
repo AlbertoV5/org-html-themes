@@ -20,17 +20,15 @@ $( document ).ready(function() {
 
 $(function() {
     function replace_admonition (tag, readable) {
-        $(`.${tag}:not(#table-of-contents *)`)
-            .parent().parent().replaceWith(function() {
-                let div = this.getElementsByClassName("note")[0];
-                let p = div.getElementsByTagName("p")[0];
-                let text = p.textContent;
-                // ${readable}
-                return `
-                <p id='${this.id}' class='admonition-title ${tag}'>
-                ${text}
-                </p>`
-            });
+        $(`.${tag}:not(#table-of-contents *)`)        
+        .replaceWith(function() {
+            // this.innerHTML.addClass = `${tag}-body`
+            return`
+            <h3 class='admon-title ${tag}-title'>${readable}</h3>
+            <div id='${this.id}' class='admon-body ${tag}-body'>
+            ${this.innerHTML}
+            </div>`
+        });
     }
     replace_admonition('note', 'Note');
     replace_admonition('seealso', 'See also');

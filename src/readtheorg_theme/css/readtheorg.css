@@ -56,7 +56,7 @@ h4,h5,h6{
     /* color:#2980B9; */
     background-color: #252525;
     background-image: linear-gradient(90deg, #252525, #1e1e1e 70%);
-    border-radius: 5px;
+    /* border-radius: 5px; */
     padding: 8px;
     padding-left: 18px;
     padding-bottom: 10px;
@@ -346,27 +346,35 @@ code{
 pre.src{
     /* color:#404040; */
     display:block;
+    box-shadow: 4px 4px #1c1c1c;
     font-family:'Fira Code',Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
     font-size:15px;
     line-height:1.5;
-    margin:1px 0px 24px 0px;
+    margin:1px 0px 20px 0px;
     /* margin-left:10px; */
     overflow:auto;
     padding:15px;
     white-space:pre;
 }
 
+.linenr{
+    font-size:15px;
+    font-family:'Fira Code',Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
+}
+
 .example{
     background:#252525;
     border:1px solid #303030;
+    box-shadow: 4px 4px #1c1c1c;
+    font-family:'Fira Code',Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
     color:#d0d0d0;
     font-size: 15px;
     line-height: 1.5;
-    margin-bottom:24px;
+    margin-bottom:20px;
     padding:12px;
     overflow: auto;
+    max-height: 200px;
 }
-
 
 table{
     border-collapse:collapse;
@@ -379,10 +387,12 @@ table{
     border-right:1px solid #303030;
     border-left:1px solid #303030;
     border-bottom:1px solid #303030;
+    box-shadow: 4px 4px #1c1c1c;
 }
 
 td{
-    vertical-align:top}
+    vertical-align:top
+}
 
 table td,table th{
     font-size:90%;
@@ -661,6 +671,7 @@ a .fa,a #content .admonition-title,#content a .admonition-title{
     line-height: 1;
     background:#2259a1;
     color:#d0d0d0;
+    padding-bottom: 20px;
     font-family:"Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
     font-weight:normal;
     margin:0;
@@ -862,21 +873,21 @@ ul.nav>li.active a {
 }
 
 ul.nav>li.active li.active {
-    background-color: #c9c9c9;
+    background-color: #c6c6c6;
 }
 
 ul.nav>li.active li.active>a {
     color: #252525 !important;
-    border-right:solid 1px #c9c9c9 !important;
+    border-right:solid 1px #c6c6c6 !important;
     font-weight: bold !important;
     display: block !important;
 }
 
 ul.nav>li.active>a {
-    background-color: #c9c9c9;
+    background-color: #c6c6c6;
     color: #252525!important;
-    border-bottom:solid 1px #c9c9c9 !important; /* XXX Restrict it to 2nd level */
-    border-right:solid 1px #c9c9c9 !important;
+    border-bottom:solid 1px #c6c6c6 !important; /* XXX Restrict it to 2nd level */
+    border-right:solid 1px #c6c6c6 !important;
     font-weight: bold !important;
     display: block !important;
 }
@@ -1183,4 +1194,68 @@ h2.footnotes{
 #org-div-home-and-up { 
     text-align: right;
     padding-right: 10pt;
+}
+
+/* ADMONITIONS */
+
+.admon-title {
+    border:0px solid #303030;
+    border-bottom: 0px;
+    font-size: 110%;
+    font-weight: 300px;
+    margin-bottom: 0px;
+    padding:8px;
+    padding-left: 12px;
+    padding-bottom: 10px;
+    overflow: auto; 
+    box-shadow: 4px 4px #1c1c1c;
+}
+
+.admon-body {
+    border:0px solid #303030;
+    border-top: 0px;
+    margin-top:-1px;
+    margin-bottom:20px;
+    padding:12px;
+    padding-left: 12px;
+    padding-bottom: 0px;
+    overflow: auto; 
+    background-color:#252525;
+    box-shadow: 4px 4px #1c1c1c;
+}
+
+.note-title, .tip-title, .seealso-title {
+    border-left: 5px solid #2259a1;
+    background-color:#2259a190;
+}
+
+.note-body, .tip-body, .seealso-body {
+    border-left: 5px solid #2259a1;
+}
+
+.important-title, .hint-title {
+    border-left: 5px solid #00bfa5;
+    background-color:#00bfa570;
+}
+
+.important-body, .hint-body {
+    border-left: 5px solid #00bfa5;
+}
+
+.caution-title, .attention-title {
+    border-left: 5px solid #ff9100;
+    background-color:#ff910070;
+}
+
+.caution-body, .attention-body {
+    border-left: 5px solid #ff9100;
+}
+
+.error-title, .warning-title, .danger-title {
+    border-left: 5px solid #ff5252;
+    background-color:#ff525270;
+}
+
+.error-body, .warning-body, .danger-body {
+    border-left: 5px solid #ff5252;
 }
