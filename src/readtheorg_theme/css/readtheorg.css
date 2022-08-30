@@ -28,10 +28,11 @@ h2{
     border: 1px solid #303030;
     /* box-shadow: 4px 4px #1c1c1c; */
     /* background-image: linear-gradient(90deg, #252525, #1e1e1e 70%); */
-    /* border-radius: 5px; */
+    border-radius: 5px;
     padding: 10px;
     padding-left: 14px;
     padding-bottom: 12px;
+    margin-left: 0px;
     font-size:150%;
 }
 
@@ -39,10 +40,11 @@ h3{
     background-color: #252525;
     border: 1px solid #303030;
     /* background-image: linear-gradient(90deg, #252525, #1e1e1e 70%); */
-    /* border-radius: 5px; */
+    border-radius: 5px;
     padding: 10px;
     padding-bottom: 12px;
     padding-left: 18px;
+    /* margin-left: 10px; */
     font-size:125%;
 }
 
@@ -61,8 +63,8 @@ h6{
 h4,h5,h6{
     /* color:#2980B9; */
     background-color: #252525;
-    background-image: linear-gradient(90deg, #252525, #1e1e1e 70%);
-    /* border-radius: 5px; */
+    /* background-image: linear-gradient(90deg, #252525, #1e1e1e 70%); */
+    border-radius: 5px;
     padding: 8px;
     padding-left: 18px;
     padding-bottom: 10px;
@@ -86,10 +88,11 @@ body{
 }
 
 #content{
+    border-right: 1px solid #303030;
     background:#1e1e1e;
     margin-left:280px;
     /* margin:auto; */
-    max-width:850px;
+    max-width:900px;
     min-height:100%;
     padding:1.618em 3.236em;
 }
@@ -309,7 +312,7 @@ code{
     background:#252525;
     border:solid 1px #303030;
     /* border-radius: 12px; */
-    color:#e0e0e0;  /*for clickable code */
+    color:#c5937c;  /*for clickable code */
     font-family:'Fira Code',Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
     font-size:100%;
     max-width:100%;
@@ -342,7 +345,7 @@ code{
 
 .codeblock,pre.src,#content .literal-block{
     border:1px solid #303030;
-    /* border-radius: 20px; */
+    /* border-radius: 24px; */
     padding:12px;
     overflow-x:auto;
     background:#252525;
@@ -358,6 +361,8 @@ pre.src{
     line-height:1.5;
     margin:1px 0px 20px 0px;
     /* margin-left:10px; */
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     overflow:auto;
     padding:15px;
     white-space:pre;
@@ -369,27 +374,37 @@ pre.src{
 }
 
 .example{
-    background:#252525;
+    background:#1e1e1e;
     border:1px solid #303030;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
     box-shadow: 4px 4px #1c1c1c;
     font-family:'Fira Code',Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
     color:#d0d0d0;
     font-size: 15px;
     line-height: 1.5;
-    margin-bottom:20px;
-    padding:12px;
+    margin-bottom:24px;
+    margin-top:-24px;
+    padding:15px;
     overflow: auto;
     max-height: 200px;
+    border-top: 0px;
+    /* border-left: 1px solid #303030; */
 }
 
 table{
+    min-width: 100%;
+    display: block; 
+    max-height: 240px; 
+    overflow: auto;
     border-collapse:collapse;
     border-spacing:0;
     empty-cells:show;
-    margin-bottom:20px;
+    margin-bottom:24px;
     /* font-family:'Fira Code',Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace; */
     /* margin-left:10px; */
-    border-top:1px solid #303030;
+    margin-top:-21px;
+    border-top:0px solid #303030;
     border-right:1px solid #303030;
     border-left:1px solid #303030;
     border-bottom:1px solid #303030;
@@ -401,20 +416,24 @@ td{
 }
 
 table td,table th{
-    font-size:100%;
-    margin:0;
+    font-size:90%;
     overflow:visible;
     padding:8px 16px;
-    background-color:#252525;
+    background-color:#1e1e1e;
     border:1px solid #303030;
 }
 
 table thead th{
     font-weight:bold;
-    font-size:100%;
+    font-size:90%;
     background-color:#1e1e1e;
     border-top:1px solid #303030;
     border-bottom:1px solid #303030;
+}
+
+table tbody {
+    display: table;
+    min-width: 100%;
 }
 
 table caption{
@@ -425,12 +444,12 @@ table caption{
 
 table tr:nth-child(2n-1) td{
     font-family:'Fira Code',Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
-    background-color:#252525;
+    background-color:#1e1e1e;
 }
 
 table tr:nth-child(2n) td{
     font-family:'Fira Code',Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
-    background-color:#1e1e1e;
+    background-color:#252525;
 }
 
 .figure p{
@@ -489,6 +508,7 @@ table tr:nth-child(2n) td{
 
     #toggle-sidebar h2 {
         background-image: none;
+        box-shadow: none;
         border-radius: 0%;
         background-color:#2259a1;
         width:100%;
@@ -830,8 +850,8 @@ hr{
 }
 
 #table-of-contents a:hover{
-    color: #ffffff !important;
-    background-color:#2259a1; /*#538bf7*/
+    color: #252525 !important;
+    background-color:#c6c6c6; /*#538bf7*/
     cursor:pointer}
 
 /* #text-table-of-contents { */
@@ -874,15 +894,15 @@ ul.nav > li ul {
 }
 
 li.active {
-    background-color: #e3e3e3;
+    background-color: #252525;
 }
 
 li.active>a {
-    color: #252525 !important;
+    color: #303030 !important;
 }
 
 ul.nav>li.active a {
-    color: #404040 !important;
+    color: #c6c6c6 !important;
 }
 
 ul.nav>li.active li.active {
@@ -1221,6 +1241,8 @@ h2.footnotes{
     padding-left: 12px;
     padding-bottom: 10px;
     overflow: auto; 
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
     box-shadow: 4px 4px #1c1c1c;
 }
 
@@ -1228,7 +1250,7 @@ h2.footnotes{
     border:0px solid #303030;
     border-top: 0px;
     margin-top:-1px;
-    margin-bottom:20px;
+    margin-bottom:24px;
     padding:12px;
     padding-left: 12px;
     padding-bottom: 0px;
