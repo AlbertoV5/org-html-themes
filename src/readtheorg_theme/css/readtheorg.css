@@ -368,7 +368,6 @@ pre.src{
     white-space:pre;
     margin-bottom: -1px;
     border-left: 5px solid #303030;
-
 }
 
 .src-lang{
@@ -382,6 +381,35 @@ pre.src{
     font-size:15px;
     text-align:right;
     opacity:0.5;
+}
+
+/* .src-name {
+    font-family:"Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
+    font-family:'Fira Code',Consolas,"Andale Mono WT","Andale Mono","Lucida Console";
+    text-align: right;
+    opacity:0.5;
+    padding:0px;
+    font-size:15px;
+    margin: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-top: -15px;
+    overflow:auto;
+    opacity:0.0;
+} */
+
+.src-name {
+    font-family:"Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
+    font-family:'Fira Code',Consolas,"Andale Mono WT","Andale Mono","Lucida Console";
+    text-align: right;
+    opacity:0.5;
+    padding:0px;
+    font-size:15px;
+    margin: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-top: -20px;
+    overflow:auto;
 }
 
 .linenr{
@@ -1275,7 +1303,7 @@ h2.footnotes{
 }
 
 .admon-body {
-    border:0px solid #303030;
+    border:1px solid #303030;
     border-top: 0px;
     margin-top:-1px;
     margin-bottom:24px;
@@ -1322,3 +1350,5 @@ h2.footnotes{
 .error-body, .warning-body, .danger-body {
     border-left: 5px solid #ff5252;
 }
+
+

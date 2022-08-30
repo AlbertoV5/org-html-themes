@@ -44,13 +44,11 @@ $(function() {
 
 $(function(){
     function replace_source (tag, readable){
-        console.log(this.innerHTML);
         $(`.${tag}:not(#table-of-contents *)`)
         .replaceWith(function () {
-            console.log(this.innerHTML)
             return `
-            <div class="src-lang">${readable}</div>
-            <pre class="src ${tag}" id=${this.id}>${this.innerHTML}</pre>
+            <div class='src-lang'>${readable}</div>
+            <pre class='src ${tag}'>${this.innerHTML}</pre>
             `
         })
     }
@@ -58,12 +56,32 @@ $(function(){
     replace_source('src-shell', 'Shell');
     replace_source('src-C', 'C');
     replace_source('src-sql', 'SQL');
+    replace_source('src-js', 'Javascript');
     replace_source('src-C++', 'C++');
     replace_source('src-rust', 'Rust');
-    replace_source('src-javascript', 'Javascript');
     replace_source('src-go', 'Go');
     replace_source('src-elisp', 'Elisp');
+    replace_source('src-clojure', 'Clojure');
+    replace_source('src-elm', 'Elm');
     replace_source('src-scala', 'Scala');
+});
+
+$(function(){
+    function replace_name (tag){
+        $(`.${tag}:not(#table-of-contents *)`)
+        .replaceWith(function () {
+            let name = this.getElementsByTagName("p")[0];
+            let e = document.createElement('div');
+            e.className = tag;
+            e.textContent = name.innerHTML.replace("<sub>", "_").replace("</sub>", "");
+            if (e.textContent.length <= 2){
+                e.textContent = ".     ";
+            }
+            this.nextElementSibling.prepend(e);
+            return ``
+        })
+    }
+    replace_name('src-name');
 });
 
 $( document ).ready(function() {
