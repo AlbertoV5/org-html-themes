@@ -42,6 +42,30 @@ $(function() {
     replace_admonition('danger', 'Danger');
 });
 
+$(function(){
+    function replace_source (tag, readable){
+        console.log(this.innerHTML);
+        $(`.${tag}:not(#table-of-contents *)`)
+        .replaceWith(function () {
+            console.log(this.innerHTML)
+            return `
+            <div class="src-lang">${readable}</div>
+            <pre class="src ${tag}" id=${this.id}>${this.innerHTML}</pre>
+            `
+        })
+    }
+    replace_source('src-python', 'Python');
+    replace_source('src-shell', 'Shell');
+    replace_source('src-C', 'C');
+    replace_source('src-sql', 'SQL');
+    replace_source('src-C++', 'C++');
+    replace_source('src-rust', 'Rust');
+    replace_source('src-javascript', 'Javascript');
+    replace_source('src-go', 'Go');
+    replace_source('src-elisp', 'Elisp');
+    replace_source('src-scala', 'Scala');
+});
+
 $( document ).ready(function() {
 
     // Shift nav in mobile when clicking the menu.

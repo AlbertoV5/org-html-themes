@@ -368,6 +368,29 @@ pre.src{
     white-space:pre;
 }
 
+.src-lang{
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+    font-family:'Fira Code',Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
+    margin-bottom:-42px;
+    padding:12px;
+    font-size:15px;
+    text-align:right;
+    opacity:0.5;
+}
+
+/* pre.src-python:before{
+    content: 'python';
+}
+pre.src-C:before{
+    content: 'C';
+}
+pre.src-shell:before{
+    content: 'shell';
+} */
+
 .linenr{
     font-size:15px;
     font-family:'Fira Code',Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
