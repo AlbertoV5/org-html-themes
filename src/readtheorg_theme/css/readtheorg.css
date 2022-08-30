@@ -46,6 +46,7 @@ h3{
     padding-left: 18px;
     /* margin-left: 10px; */
     font-size:125%;
+    margin-top: auto;
 }
 
 h4{
@@ -359,13 +360,15 @@ pre.src{
     font-family:'Fira Code',Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
     font-size:15px;
     line-height:1.5;
-    margin:1px 0px 20px 0px;
     /* margin-left:10px; */
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     overflow:auto;
     padding:15px;
     white-space:pre;
+    margin-bottom: -1px;
+    border-left: 5px solid #303030;
+
 }
 
 .src-lang{
@@ -381,16 +384,6 @@ pre.src{
     opacity:0.5;
 }
 
-/* pre.src-python:before{
-    content: 'python';
-}
-pre.src-C:before{
-    content: 'C';
-}
-pre.src-shell:before{
-    content: 'shell';
-} */
-
 .linenr{
     font-size:15px;
     font-family:'Fira Code',Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
@@ -399,43 +392,52 @@ pre.src-shell:before{
 .example{
     background:#1e1e1e;
     border:1px solid #303030;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    /* border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px; */
     box-shadow: 4px 4px #1c1c1c;
     font-family:'Fira Code',Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
     color:#d0d0d0;
     font-size: 15px;
     line-height: 1.5;
     margin-bottom:24px;
-    margin-top:-24px;
-    padding:15px;
+    margin-top:0px;
+    padding:10px;
+    padding-left: 20px;
     overflow: auto;
-    max-height: 200px;
-    border-top: 0px;
-    /* border-left: 1px solid #303030; */
+    max-height: 240px;
+    border-left: 5px solid #303030;
 }
 
 table{
-    display: block; 
     min-width: 100%;
-    max-height: 240px; 
+    display: block;     
     overflow: auto;
     border-collapse:collapse;
-    border-spacing:0;
+    border-spacing:0px;
     empty-cells:show;
-    margin-bottom:24px;
-    /* font-family:'Fira Code',Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace; */
+     /* font-family:'Fira Code',Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace; */
     /* margin-left:10px; */
-    margin-top:-21px;
     border-top:0px solid #303030;
     border-right:1px solid #303030;
     border-left:1px solid #303030;
     border-bottom:1px solid #303030;
     box-shadow: 4px 4px #1c1c1c;
+    margin-bottom:24px;
+    max-height: 240px; 
+    /* border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px; */
+    border-left: 4px solid #303030;
+
+    /* margin-top:-21px; */
 }
 
-/* td{
-    vertical-align:top
+/* colgroup{
+    display: table;
+    min-width: 100%; 
+    border:1px solid #303030;
+    font-size:90%;
+    overflow:visible;
+    padding:8px 16px;
 } */
 
 table td,table th{
@@ -444,17 +446,21 @@ table td,table th{
     padding:8px 16px;
     background-color:#1e1e1e;
     border:1px solid #303030;
-    min-width: 100%;
+    table-layout: fixed;
 }
 
-table thead th{
-    display: table;
+table thead th {
     font-weight:bold;
     font-size:90%;
     background-color:#1e1e1e;
     border-top:1px solid #303030;
     border-bottom:1px solid #303030;
-    min-width: 100%;
+    table-layout: fixed;
+}
+
+table thead {
+    display: table;
+    min-width: 100%; 
 }
 
 table tbody {
@@ -462,11 +468,6 @@ table tbody {
     min-width: 100%;
 }
 
-table caption{
-    color:#1C1C1C;
-    font:italic 85%/1 arial,sans-serif;
-    padding:1em 0;
-}
 
 table tr:nth-child(2n-1) td{
     font-family:'Fira Code',Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
@@ -547,7 +548,7 @@ table tr:nth-child(2n) td{
         position:fixed;
         margin: 0;
         padding: 0;
-        opacity:0.7;
+        opacity:0.9;
         z-index: 10;
     }
 
@@ -1194,8 +1195,10 @@ h2.footnotes{
 }
 
 .todo{
-    background-color: #2259a1;
-    padding: 0px 4px;
+    /* background-color: #2259a1; */
+    background-color: #9b3838;
+    border-radius: 5px;
+    padding: 0px 5px;
     color: #fff;
 }
 
@@ -1210,23 +1213,22 @@ h2.footnotes{
 }
 
 .tag span {
-    background-color: #EDEDED;
-    border: 1px solid #EDEDED;
-    color: #939393;
-    cursor: pointer;
+    background-color: #303030;
+    border: 1px solid #303030;
+    font-family:"Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
+    color: #c6c6c6;
     display: block;
     float: right;
     font-size: 80%;
     font-weight: normal;
-    margin: 0 3px;
-    padding: 1px 2px;
-    border-radius: 10px;
+    padding: 2px 5px;
+    border-radius: 5px;
 }
 
 .tag .FLAGGED {
     background-color: #DB2D27;
     border: 1px solid #DB2D27;
-    color: white;
+    color: #c6c6c6;
     font-weight: bold;
 }
 
