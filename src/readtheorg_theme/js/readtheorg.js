@@ -55,15 +55,17 @@ $(function(){
     replace_source('src-python', 'Python');
     replace_source('src-shell', 'Shell');
     replace_source('src-C', 'C');
+    replace_source('src-go', 'Go');
     replace_source('src-sql', 'SQL');
     replace_source('src-js', 'Javascript');
-    replace_source('src-C++', 'C++');
-    replace_source('src-rust', 'Rust');
-    replace_source('src-go', 'Go');
+    replace_source('src-html', 'HTML');
+    replace_source('src-css', 'CSS');
+    replace_source('src-elm', 'Elm');
     replace_source('src-elisp', 'Elisp');
     replace_source('src-clojure', 'Clojure');
-    replace_source('src-elm', 'Elm');
     replace_source('src-scala', 'Scala');
+    replace_source('src-rust', 'Rust');
+    replace_source('src-C++', 'C++');
 });
 
 $(function(){
