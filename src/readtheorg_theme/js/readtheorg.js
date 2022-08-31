@@ -46,10 +46,10 @@ $(function(){
     function replace_source (tag, readable){
         $(`.${tag}:not(#table-of-contents *)`)
         .replaceWith(function () {
+
             return `
             <div class='src-lang'>${readable}</div>
-            <pre class='src ${tag}'>${this.innerHTML}</pre>
-            `
+            <pre class='src ${tag}' id='1234'>${this.innerHTML}</pre>`
         })
     }
     replace_source('src-python', 'Python');
@@ -73,12 +73,8 @@ $(function(){
         $(`.${tag}:not(#table-of-contents *)`)
         .replaceWith(function () {
             let name = this.getElementsByTagName("p")[0];
-            // let e = document.createElement('div');
-            // e.className = tag;
-            // e.textContent = name.innerHTML.replace("<sub>", "_").replace("</sub>", "");
-            // this.nextElementSibling.prepend(e);
-            let n = name.innerHTML.replace("<sub>", "_").replace("</sub>", "").replace("\n", "");
-            console.log(n);
+            let n = name.innerHTML.replace("<sub>", "_")
+            .replace("</sub>", "").replace("\n", "").replace("\n", "");
             this.nextElementSibling.setAttribute("name", n);
             return ``
         })

@@ -371,16 +371,24 @@ pre.src{
 }
 
 .src-lang{
-    -webkit-user-select: none; /* Safari */        
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* IE10+/Edge */
-    user-select: none; /* Standard */
+    -webkit-user-select: none;
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
     font-family:'Fira Code',Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
-    margin-bottom:-42px;
-    padding:12px;
+    margin-bottom:-30px;
+    padding:4px;
+    border-top-right-radius: 5px;
     font-size:15px;
+    margin-right: -1px;
+    padding-right: 10px;
     text-align:right;
-    opacity:0.5;
+    z-index: 10;
+    background-color: #252525;
+    opacity: 0.5;
+    width: 80px;
+    margin-left: auto;
+    margin-right: 0;
 }
 
 /* .src-name {
@@ -1231,12 +1239,16 @@ h2.footnotes{
 }
 
 .WAIT, .nilWAIT{
-    background-color: #6AB097;
+    background-color: #528875;
+    border-radius: 5px;
+    padding: 0px 5px;
+    color: #fff;
 }
 
 .done{
-    background-color: #6ab0de;
-    padding: 0px 4px;
+    background-color: #4286e6;
+    border-radius: 5px;
+    padding: 0px 5px;
     color: #fff;
 }
 
