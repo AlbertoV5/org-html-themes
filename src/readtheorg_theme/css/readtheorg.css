@@ -39,7 +39,7 @@ h2{
 h3{
     background-color: #252525;
     border: 1px solid #303030;
-    /* background-image: linear-gradient(90deg, #252525, #1e1e1e 70%); */
+    /* background-image: linear-gradient(180deg, #252525, #1e1e1e 70%); */
     border-radius: 5px;
     padding: 10px;
     padding-bottom: 12px;
@@ -47,6 +47,10 @@ h3{
     /* margin-left: 10px; */
     font-size:125%;
     margin-top: auto;
+    /* border-bottom: 0px; */
+    /* border-left: 0px;
+    border-right: 0px; */
+    /* border-radius: 0px; */
 }
 
 h4{
@@ -368,6 +372,7 @@ pre.src{
     white-space:pre;
     margin-bottom: -1px;
     border-left: 5px solid #303030;
+    /* padding-left: 25px; */
 }
 
 .src-lang{
@@ -390,21 +395,7 @@ pre.src{
     margin-left: auto;
     margin-right: 0;
 }
-
-/* .src-name {
-    font-family:"Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
-    font-family:'Fira Code',Consolas,"Andale Mono WT","Andale Mono","Lucida Console";
-    text-align: right;
-    opacity:0.5;
-    padding:0px;
-    font-size:15px;
-    margin: 0px;
-    margin-left: 0px;
-    margin-bottom: 0px;
-    margin-top: -15px;
-    overflow:auto;
-    opacity:0.0;
-} */
+/* 
 
 .src-name {
     font-family:"Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
@@ -418,10 +409,18 @@ pre.src{
     margin-bottom: 0px;
     margin-top: -20px;
     overflow:auto;
-}
+} */
 
 .linenr{
-    font-size:15px;
+    -webkit-user-select: none;
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;
+    margin-left: -5px;
+    padding-right: 5px;
+    font-size:14px;
+    color: #606060;
+    /* opacity: 0.2; */
     font-family:'Fira Code',Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
 }
 
@@ -438,50 +437,67 @@ pre.src{
     margin-bottom:24px;
     margin-top:0px;
     padding:10px;
-    padding-left: 20px;
+    padding-left: 15px;
     overflow: auto;
     max-height: 240px;
     border-left: 5px solid #303030;
 }
 
-table{
+.org > .figure {
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid #303030;
+    max-height: 480px;
     min-width: 100%;
-    display: block;     
-    overflow: auto;
-    border-collapse:collapse;
-    border-spacing:0px;
-    empty-cells:show;
-     /* font-family:'Fira Code',Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace; */
-    /* margin-left:10px; */
-    border-top:0px solid #303030;
-    border-right:1px solid #303030;
-    border-left:1px solid #303030;
-    border-bottom:1px solid #303030;
-    box-shadow: 4px 4px #1c1c1c;
-    margin-bottom:24px;
-    max-height: 240px; 
-    /* border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px; */
-    border-left: 4px solid #303030;
-
-    /* margin-top:-21px; */
+    overflow-x:auto;
+    align-content: center;
 }
 
-/* colgroup{
-    display: table;
-    min-width: 100%; 
-    border:1px solid #303030;
-    font-size:90%;
-    overflow:visible;
-    padding:8px 16px;
-} */
+.figure > p{
+    margin: 0px;
+}
 
-table td,table th{
+.figure > p > img {
+    margin: 0px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table{
+    overflow: auto;
+    border-collapse:collapse;
+    border-spacing:1px;
+    empty-cells:show;
+    border: 1px solid #303030;
+    box-shadow: 4px 4px #1c1c1c;
+    margin-bottom:24px;
+    max-height: 240px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-left: 4px solid #303030;
+}
+
+.org-src-container + table, .example + table, .org + table {
+    display: block;
+    min-width: 100%;
+    border: 1px solid #303030;
+    border-top:0px solid #303030;
+    border-left: 5px solid #303030;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.example + table {
+    margin-top: -10px;
+}
+
+table td, table th{
     font-size:90%;
     overflow:visible;
     padding:8px 16px;
     background-color:#1e1e1e;
-    border:1px solid #303030;
+    border-right: 1px solid #303030;
     table-layout: fixed;
 }
 
@@ -494,14 +510,20 @@ table thead th {
     table-layout: fixed;
 }
 
-table thead {
-    display: table;
-    min-width: 100%; 
+table thead, table tbody {
+    border: 1px solid #303030;
 }
 
-table tbody {
+.org-src-container + table thead, .example + table, .org + table {
+    display: table;
+    min-width: 100%; 
+    border: 0px;
+}
+
+.org-src-container + table tbody, .example + table, .org + table {
     display: table;
     min-width: 100%;
+    border: 0px;
 }
 
 table tr:nth-child(2n-1) td{
@@ -513,6 +535,7 @@ table tr:nth-child(2n) td{
     font-family:'Fira Code',Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
     background-color:#252525;
 }
+
 
 .figure p{
     color:#000;
@@ -633,7 +656,7 @@ sub{
 img{
     -ms-interpolation-mode:bicubic;
     vertical-align:middle;
-    max-width:100%}
+}
 
 svg:not(:root){
     overflow:hidden}
