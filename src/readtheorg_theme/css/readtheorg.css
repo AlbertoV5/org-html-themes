@@ -449,7 +449,8 @@ pre.src{
     border: 1px solid #303030;
     max-height: 480px;
     min-width: 100%;
-    overflow-x:auto;
+    overflow-x: auto;
+    overflow-y: auto;
     align-content: center;
 }
 
@@ -465,21 +466,20 @@ pre.src{
 }
 
 table{
+    display:block;
     overflow: auto;
     border-collapse:collapse;
     border-spacing:1px;
     empty-cells:show;
-    border: 1px solid #303030;
-    box-shadow: 4px 4px #1c1c1c;
+    border: 0px solid #303030;
     margin-bottom:24px;
     max-height: 240px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-left: 4px solid #303030;
+    border-left: 1px solid #303030;
 }
 
 .org-src-container + table, .example + table, .org + table {
     display: block;
+    box-shadow: 4px 4px #1c1c1c;
     min-width: 100%;
     border: 1px solid #303030;
     border-top:0px solid #303030;
